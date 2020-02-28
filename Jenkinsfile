@@ -19,5 +19,10 @@ pipeline {
                   echo 'Packaging..'
             }
         }
+     stage('---Publish--') {
+            steps {
+                nexusPublisher nexusInstanceId: 'LocalNexus-3', nexusRepositoryId: 'maven-releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'C:\\Users\\011391\\.jenkins\\workspace\\GroovyPipelineSpringBoot\\target\\SpringBootRestApiExample-1.0.0.jar']], mavenCoordinate: [artifactId: 'Drop59', groupId: 'CDR_central', packaging: 'jar', version: '$FILENAME+$VERSION']]]
+            }
+        }
     }
 }
