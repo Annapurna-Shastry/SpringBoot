@@ -25,4 +25,11 @@ pipeline {
             }
         }
     }
+	post { 
+	  stage('---CLEAN WS--') {
+        always { 
+            cleanWs()
+        }
+		}
+    }
 }
