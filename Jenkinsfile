@@ -7,6 +7,7 @@ pipeline {
         //        echo 'Cleaning..'
          //   }
        // }
+	    def service
         stage('---Test---') {
             steps {
                 echo 'Testing..'
@@ -14,7 +15,9 @@ pipeline {
         }
         stage('---package--') {
             steps {
-                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
+		   service = $SERVICE
+		    echo '${service}/pom.xml'
+                 bat "mvn -f SpringBoot/pom.xml -Dmaven.test.failure.ignore=true clean package"
                   echo 'Packaging..'
             }
         }
