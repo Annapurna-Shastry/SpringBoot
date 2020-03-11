@@ -7,7 +7,7 @@ pipeline {
         //        echo 'Cleaning..'
          //   }
        // }
-	    def service
+	  //  def service
         stage('---Test---') {
             steps {
                 echo 'Testing..'
