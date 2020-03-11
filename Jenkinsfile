@@ -19,7 +19,7 @@ pipeline {
 		    echo "$SERVICE/pom.xml"
                  //bat "mvn -Dmaven.test.failure.ignore=true clean package"
 		 //bat "mvn -f pom.xml -Dmaven.test.failure.ignore=true clean package"
-		    bat "mvn -f \\GroovyPipelineSpringBoot\\pom.xml -Dmaven.test.failure.ignore=true clean package"
+		    bat "mvn -f GroovyPipelineSpringBoot//pom.xml -Dmaven.test.failure.ignore=true clean package"
                   echo 'Packaging..'
             }
         }
