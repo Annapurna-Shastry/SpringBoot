@@ -15,7 +15,7 @@ pipeline {
         }
         stage('---package--') {
             steps {
-		   service = $SERVICE
+		  // service = $SERVICE
 		    echo '${service}/pom.xml'
                  bat "mvn -f SpringBoot/pom.xml -Dmaven.test.failure.ignore=true clean package"
                   echo 'Packaging..'
