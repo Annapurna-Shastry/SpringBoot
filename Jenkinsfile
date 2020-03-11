@@ -17,7 +17,7 @@ pipeline {
             steps {
 		  // service = $SERVICE
 		    echo "$SERVICE/pom.xml"
-                 bat "mvn -f SpringBoot/pom.xml -Dmaven.test.failure.ignore=true clean package"
+                 bat "mvn --file SpringBoot/pom.xml -Dmaven.test.failure.ignore=true clean package"
                   echo 'Packaging..'
             }
         }
